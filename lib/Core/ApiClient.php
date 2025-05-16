@@ -10,11 +10,13 @@ namespace GoCardlessPro\Core;
 use GoCardlessPro\Core\Exception\ApiException;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Psr7\Response;
+use \AllowDynamicProperties;
 
 /**
  * HTTP Client class wrapped by the Client class and
  * used internally to route http requests.
  */
+#[AllowDynamicProperties]
 class ApiClient
 {
     private $http_client;
